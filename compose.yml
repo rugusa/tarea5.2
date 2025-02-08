@@ -1,6 +1,6 @@
 services:
   php:
-    image: rugusa/calculadora22
+    image: rugusa/calculadora:v2
     container_name: contenedorNuevo
     ports:
     - "8080:80"
