@@ -46,6 +46,6 @@ jobs:
        script: |
         cd ~/deploy
         sudo chmod 666 /var/run/docker.sock
-        docker compose down || true
-        docker compose pull
-        docker compose up -d
+        docker-compose down || true
+        docker-compose pull
+        docker-compose up -d
