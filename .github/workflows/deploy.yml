@@ -6,6 +6,7 @@ on:
 jobs:
  build-and-deploy:
    runs-on: ubuntu-latest
+
    steps:
    # Clonar el repositorio
    - name: Checkout code
@@ -22,7 +23,7 @@ jobs:
      
    - name: Build and push PHP Docker image
      run: |
-      
+      cd php
       docker build -t ${{ secrets.DOCKER_USERNAME }}/calculadora:v2 .
       docker push ${{ secrets.DOCKER_USERNAME }}/calculadora:v2
  
